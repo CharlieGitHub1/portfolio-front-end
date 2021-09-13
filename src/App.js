@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import axios from 'axios';
+import { createGlobalStyle } from 'styled-components';
+import { useState, useEffect } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+// Components
+import { Container } from './components/Container';
+
+const GlobalStyle = createGlobalStyle`
+
+  body {
+    font-size: 16px;
+    font-family: 'Timmana', sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }  
+  
+`;
+
+const App = () => (
+  <>
+    <GlobalStyle />
+    <div id="app">
+      <Container />
     </div>
-  );
-}
+  </>
+)
 
 export default App;

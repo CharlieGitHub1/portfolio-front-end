@@ -4,6 +4,7 @@ import axios from 'axios';
 // Components
 import { Hero } from './Hero';
 import { NavBar } from './Navbar';
+import { Header } from './Header';
 /**
  * Container component that handles initial data rendering
  */
@@ -22,12 +23,12 @@ const Container = ({ children }) => {
     }, [])
 
     if (loading) {
-        return <p>Loading!!!</p>
+        return <p>Just wait it's loading</p>
     }
 
     return (
         <div id="app">
-            <NavBar />
+            <Header {...data.header} />
             <Hero
                 title={data.hero.title}
                 sub_title={data.hero.sub_title}

@@ -15,7 +15,7 @@ const HeroStyle = styled.div`
         font-size: 7em;
         color: #fff;
         font-weight: 400;
-        letter-spacing: 30px;
+        letter-spacing: 3px;
         font-family: 'Six Caps';
     }
     h2 {
@@ -25,13 +25,20 @@ const HeroStyle = styled.div`
 
     .wrapper {
         max-width: 80%;
-        margin: 0 auto;
+        margin: 100px auto 0;
 
         .top {
             display: flex;
 
             & > div {
-                flex: 1 1 50%;
+                &.left { flex: 1 1 55%; }
+                &.right {
+                    flex: 1 1 45%;
+
+                    & > div {
+                        margin: 0 0 0 auto;
+                    }
+                }
             }
         }
     }
@@ -52,7 +59,7 @@ const Hero = ({ title, sub_title }) => {
                         <h2>{sub_title}</h2>
                     </div>
                     <div className="right">
-                        <Circle size='100px' />
+                        <Circle size='300px' />
                     </div>
                 </div>
                 <div className="bottom">

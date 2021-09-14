@@ -4,6 +4,7 @@ import axios from 'axios';
 // Components
 import { Hero } from '../Hero';
 import { Header } from '../Header';
+import { Project } from '../Project';
 /**
  * Container component that handles initial data rendering
  */
@@ -32,6 +33,9 @@ const Container = ({ children }) => {
                 title={data.hero.title}
                 sub_title={data.hero.sub_title}
             />
+            {data.projects.map((project) => {
+                return <Project {...project} />
+            })}
         </div>
     );
 }

@@ -2,9 +2,8 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 // Components
-import { Hero } from './Hero';
-import { NavBar } from './Navbar';
-import { Header } from './Header';
+import { Hero } from '../Hero';
+import { Header } from '../Header';
 /**
  * Container component that handles initial data rendering
  */

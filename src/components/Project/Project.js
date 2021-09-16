@@ -1,7 +1,8 @@
 import { Circle } from '../Circle';
 import { ProjectStyle } from './styled';
+import { Image } from '../Image';
 
-const Project = ({ title, text_content }) => {
+const Project = ({ title, text_content, main_image }) => {
 
     return (
         <ProjectStyle>
@@ -25,7 +26,12 @@ const Project = ({ title, text_content }) => {
                     </div>
                 </div>
                 <div className='right'>
-                    Image here
+                    {main_image &&
+                        <Image
+                            url={main_image.url}
+                            alt={title + ' Project'}
+                        />
+                    }
                 </div>
             </div>
         </ProjectStyle>

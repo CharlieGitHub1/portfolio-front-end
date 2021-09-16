@@ -5,6 +5,7 @@ import axios from 'axios';
 import { Hero } from '../Hero';
 import { Header } from '../Header';
 import { Project } from '../Project';
+import { Footer } from '../Footer';
 /**
  * Container component that handles initial data rendering
  */
@@ -36,6 +37,7 @@ const Container = ({ children }) => {
             {data.projects.map((project) => {
                 return <Project {...project} />
             })}
+            <Footer {...data.footer} />
         </div>
     );
 }

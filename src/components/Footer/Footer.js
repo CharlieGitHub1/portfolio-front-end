@@ -1,5 +1,6 @@
 import { Circle } from "../Circle"
 import { FooterStyle } from './styled';
+import { SocialMedia } from '../SocialMedia';
 
 const Footer = ({
     title_one,
@@ -8,7 +9,8 @@ const Footer = ({
     nav_items_one,
     nav_items_two,
     nav_items_three,
-    copyright
+    copyright,
+    socialNav
 }) => {
 
     const renderNavItems = (items, title) => {
@@ -31,18 +33,18 @@ const Footer = ({
     return (
         <FooterStyle>
             <div className='container'>
-                <div>
-                    <Circle size="50px" />
+                <div className='circle-wrapper'>
+                    <Circle size="100px" />
                 </div>
                 <div className="wrapper">
                     {renderNavItems(nav_items_one, title_one)}
                     {renderNavItems(nav_items_two, title_two)}
                     {renderNavItems(nav_items_three, title_three)}
                 </div>
-                <div>
-                    <p>socialNav</p>
+                <div className='social'>
+                    <SocialMedia nav={socialNav} />
                 </div>
-                <div>
+                <div className='charlescc'>
                     <p>{copyright}</p>
                 </div>
 

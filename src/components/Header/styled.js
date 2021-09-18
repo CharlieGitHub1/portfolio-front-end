@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderStyle = styled.header`
+    z-index: 1000;
     position: absolute;
     left: 0;
     right: 0;
@@ -29,6 +30,10 @@ export const HeaderStyle = styled.header`
         }
         .social-media {
             flex: 1 1 33%;
+
+            a {
+                font-size: 1.3em;
+            }
         }
     }
 `;

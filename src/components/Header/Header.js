@@ -1,6 +1,7 @@
 import { Circle } from '../Circle';
 
 // Components
+import { SocialMedia } from '../SocialMedia';
 import { NavBar } from '../Navbar';
 import { HeaderStyle } from './styled';
 
@@ -18,7 +19,7 @@ const Header = (props) => {
                 </div>
                 <NavBar items={props.nav_item} />
                 <div className='social-media'>
-                    Social Links Here
+                    <SocialMedia nav={props.socialNav} />
                 </div>
             </div>
         </HeaderStyle>

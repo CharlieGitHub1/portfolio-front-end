@@ -29,7 +29,10 @@ const Container = ({ children }) => {
 
     return (
         <div id="app">
-            <Header {...data.header} />
+            <Header
+                {...data.header}
+                socialNav={data.social_links}
+            />
             <Hero
                 title={data.hero.title}
                 sub_title={data.hero.sub_title}
@@ -37,7 +40,10 @@ const Container = ({ children }) => {
             {data.projects.map((project) => {
                 return <Project {...project} />
             })}
-            <Footer {...data.footer} />
+            <Footer
+                {...data.footer}
+                socialNav={data.social_links}
+            />
         </div>
     );
 }

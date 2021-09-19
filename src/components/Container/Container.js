@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
+// JSON Data
+import portfolioData from '../../data.json';
+
 // Components
 import { Hero } from '../Hero';
 import { Header } from '../Header';
@@ -16,9 +19,16 @@ const Container = ({ children }) => {
 
     useEffect(() => {
         async function loadData() {
-            const response = await axios.get("http://localhost:1337/portfolio")
-            setData(response.data)
-            setLoading(false)
+
+            if (process.env.NODE_ENV === 'development') {
+                const response = await axios.get("http://localhost:1337/portfolio")
+                setData(response.data)
+            }
+            else {
+                setData(portfolioData);
+            }
+
+            setLoading(false);
         }
         loadData();
     }, [])

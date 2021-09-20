@@ -37,4 +37,17 @@ export const HeaderStyle = styled.header`
             }
         }
     }
+
+    // Mobile menu button
+    #mobile-menu {
+        position: absolute;
+        right: 25px;
+        top: 30px;
+        left: auto;
+        bottom: auto;
+
+        svg {
+            font-size: 26px;
+        }
+    }
 `;

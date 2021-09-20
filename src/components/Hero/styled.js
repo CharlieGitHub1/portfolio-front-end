@@ -7,6 +7,10 @@ export const HeroStyle = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: 860px){
+        height: auto;
+    }
     
     h1 {
         font-size: 7em;

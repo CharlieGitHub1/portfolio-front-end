@@ -1,9 +1,11 @@
 import { Circle } from '../Circle';
+import { FaBars } from "react-icons/fa";
 
 // Components
 import { SocialMedia } from '../SocialMedia';
 import { NavBar } from '../Navbar';
 import { HeaderStyle } from './styled';
+import { useMobile } from '../../hooks/useMobile';
 
 const Header = (props) => {
     return (
@@ -17,10 +19,18 @@ const Header = (props) => {
                         <span>{props.logo_name}</span>
                     </div>
                 </div>
-                <NavBar items={props.nav_item} />
-                <div className='social-media'>
-                    <SocialMedia nav={props.socialNav} />
-                </div>
+                {useMobile(768) ?
+                    <>
+                        <NavBar items={props.nav_item} />
+                        <div className='social-media'>
+                            <SocialMedia nav={props.socialNav} />
+                        </div>
+                    </>
+                    :
+                    <div id='mobile-menu'>
+                        <FaBars />
+                    </div>
+                }
             </div>
         </HeaderStyle>
     );

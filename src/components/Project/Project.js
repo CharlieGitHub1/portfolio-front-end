@@ -1,6 +1,5 @@
 import { Circle } from '../Circle';
 import { ProjectStyle } from './styled';
-import { Image } from '../Image';
 
 const Project = ({ title, text_content, main_image }) => {
     return (

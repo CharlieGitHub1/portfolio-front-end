@@ -23,6 +23,10 @@ export const FooterStyle = styled.footer`
             flex: 1 1 33%;
             text-align: center;
 
+            @media screen and (max-width: 600px){
+                flex: 1 1 100%;
+            }
+
             h2 {
                 margin: 0 0 10px;
             }

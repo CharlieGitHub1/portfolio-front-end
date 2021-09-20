@@ -5,7 +5,7 @@ export const SocialMediaStyle = styled.div`
     ul {
         list-style-type: none;
         margin: 0;
-        padding: 0s;
+        padding: 0;
 
         li {
             display: inline-block;

@@ -30,6 +30,7 @@ export const HeaderStyle = styled.header`
         }
         .social-media {
             flex: 1 1 33%;
+            text-align: right;
 
             a {
                 font-size: 1.3em;

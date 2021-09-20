@@ -7,8 +7,10 @@ const SocialMedia = ({ nav }) => {
 
     /**
      * 
-     * @param {*} iconName can be one of: 'instagram', 'pinterest', 'linkedin'
-     * @returns 
+     * @param {'instagram' | 'linkedin' | 'pinterest'} iconName
+     * @returns {JSX.Element}
+     * @see https://react-icons.github.io/react-icons/icons?name=fa
+     * @example showIcon('linkedin')
      */
     const showIcon = (iconName) => {
         if (iconName === 'instagram') return <FaInstagram />;

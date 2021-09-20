@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ProjectStyle = styled.section`
 
-    background: #000 linear-gradient(179.92deg, rgba(255, 255, 255, 0.71) -127.1%, rgba(0, 0, 0, 0.6) 84.66%);
+    background: url(${({ background }) => background});
 
     .container {
         display: flex;

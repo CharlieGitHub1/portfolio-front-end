@@ -1,3 +1,5 @@
+import { ThemeProvider } from 'styled-components';
+
 // Components
 import { Container } from './components/Container';
 
@@ -6,10 +8,12 @@ import { GlobalStyle } from './global-style';
 
 const App = () => (
   <>
-    <GlobalStyle />
-    <div id="template">
-      <Container />
-    </div>
+    <ThemeProvider theme={{}}>
+      <GlobalStyle />
+      <div id="template">
+        <Container />
+      </div>
+    </ThemeProvider>
   </>
 )
 

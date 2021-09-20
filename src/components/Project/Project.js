@@ -3,9 +3,8 @@ import { ProjectStyle } from './styled';
 import { Image } from '../Image';
 
 const Project = ({ title, text_content, main_image }) => {
-
     return (
-        <ProjectStyle>
+        <ProjectStyle background={main_image.url}>
             <div className='container'>
                 <div className='left'>
                     <div className='heading'>
@@ -25,14 +24,7 @@ const Project = ({ title, text_content, main_image }) => {
                         </p>
                     </div>
                 </div>
-                <div className='right'>
-                    {main_image &&
-                        <Image
-                            url={main_image.url}
-                            alt={title + ' Project'}
-                        />
-                    }
-                </div>
+                <div className='right' />
             </div>
         </ProjectStyle>
     )

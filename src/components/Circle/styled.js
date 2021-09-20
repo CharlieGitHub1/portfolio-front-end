@@ -19,7 +19,7 @@ export const CircleStyle = styled.div`
     position: relative;
     height: ${({ circleSize }) => circleSize};
     width: ${({ circleSize }) => circleSize};
-    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 192, 124, 1)), to(rgba(0,0,0,0)));
 
     svg {
         height: 100%;
